@@ -19,6 +19,22 @@
 	<!-- ICONS -->
 	<!-- <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png"> -->
+
+
+	<script src="https://www.gstatic.com/firebasejs/5.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAS4CLiXz-8RouEW9rpBG6-7LRKYFwNcdo",
+    authDomain: "citykruizadmin.firebaseapp.com",
+    databaseURL: "https://citykruizadmin.firebaseio.com",
+    projectId: "citykruizadmin",
+    storageBucket: "citykruizadmin.appspot.com",
+    messagingSenderId: "309785868717"
+  };
+  firebase.initializeApp(config);
+</script>
+
 </head>
 
 <body>
@@ -35,7 +51,7 @@
 								</div>
 								<p class="lead">Login to your account</p>
 							</div>
-							<form class="form-auth-small" >
+							<form class="form-auth-small" action="../user_login_api.js" >
 								<div class="form-group">
 									<label for="signin-email" class="control-label sr-only">Email</label>
 									<input type="email" class="form-control" id="signin-email" value="samuel.gold@domain.com" placeholder="Email">
@@ -50,7 +66,7 @@
 										<span>Remember me</span>
 									</label>
 								</div>
-								<a href="home.html"><button  class="btn btn-primary btn-lg btn-block">LOGIN</button></a>
+								<button  class="btn btn-primary btn-lg btn-block" onclick="login()">LOGIN</button>
 								
 								<div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
